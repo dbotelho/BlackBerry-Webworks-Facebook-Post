@@ -42,7 +42,7 @@ function FacebookObject() {
 				var query_string = 'access_token='
 						+ current_object.access_token + '&'
 						+ current_object.query.join('&');
-				facebook.com.post({
+				com.dbotelho.facebook.post({
 					url : "https://graph.facebook.com/me/feed",
 					type : 'POST',
 					data : query_string,
@@ -59,7 +59,7 @@ function FacebookObject() {
 						+ '&scope=read_stream,publish_stream'
 						+ '&response_type=token' + '&state='
 						+ current_object.state;
-				facebook.com.connect(url, urlCallback);
+				com.dbotelho.facebook.connect(url, urlCallback);
 			}
 
 		} catch (e) {
@@ -85,12 +85,12 @@ function FacebookObject() {
 		current_object.access_token = getUrlVars(newUrl)["access_token"];
 		try {
 			if (current_object.access_token) {
-				facebook.com.close;
+				com.dbotelho.facebook.close;
 				try {
 					var query_string = 'access_token='
 							+ current_object.access_token + '&'
 							+ current_object.query.join('&');
-					facebook.com.post({
+					com.dbotelho.facebook.post({
 						url : "https://graph.facebook.com/me/feed",
 						type : 'POST',
 						data : query_string,
