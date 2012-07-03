@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library>
+    <extension>
+        <entryClass>com.dbotelho.facebook.AExt</entryClass>
+    </extension>
+    <features>
+        <feature id="com.dbotelho.facebook" version="1.0.0" >Facebook Connect API</feature>
+    </features>
+</library>
