@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.0.0.0">
+  <name>facebookpost</name>
+  <feature id="com.dbotelho.facebook" required="false" version="1.0.0"/>
+  <access subdomains="true" uri="https://facebook.com"/>
+  <access subdomains="true" uri="http://facebook.com"/>
+  <content src="index.html"/>
+  <rim:navigation mode="focus"/>
+</widget>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" id="viewport" content="height=device-height,width=device-width,user-scalable=no" />
+<title>FacebookPost </title>
+<script language="javascript" type="text/javascript"
+	src="lib/FacebookObject.js"></script>
+</head>
+<body>
+<p>Facebook Post</p>
+<p><textarea id="myTextarea" rows="3" cols="20" style="width:200px;margin:0;padding:0;"></textarea></p>
+<button type="button"  onclick="post()">Post on facebook</button><br />
+<p><small>For more information, please visit <a href="http://blog.dbotelho.com/2012/07/blackberry-webworks-facebook-post">BlackBerry Webworks Facebook Post</a></small></p>
+<script language="javascript" type="text/javascript">
+	var fb = new FacebookObject();
+	
+	function post(){
+		
+		if(!fb.canPost()){
+			alert('Please set YOUR_APP_ID and YOUR_APP_SECRET to post on Facebook!');
+			return;
+		}
+		
+		//Posting to Facebook. This will handle login and post.
+		fb.post(
+			document.getElementById("myTextarea").value,
+			function() {
+				alert("Message published!");
+			},
+			function() {
+				alert("Unable to published the message. Please try again later.");
+			}
+		);
+	}
+	
+</script>
+</body>
+</html>
+
+
+
