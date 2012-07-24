@@ -40,12 +40,12 @@ function FacebookObject() {
 					}
 				});
 			} else {
-				var url = 'https://www.facebook.com/dialog/oauth?'
+				var url = 'https://m.facebook.com/dialog/oauth?'
 						+ 'client_id=' + YOUR_APP_ID + '&redirect_uri='
 						+ YOUR_REDIRECT_URI
 						+ '&scope=read_stream,publish_stream'
 						+ '&response_type=token' + '&state='
-						+ current_object.state;
+						+ current_object.state+'&display=touch';
 				com.dbotelho.facebook.connect(url, urlCallback);
 			}
 
